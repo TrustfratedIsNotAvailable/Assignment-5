@@ -9,30 +9,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-    <style>
-        .poppins {
-            font-family: "Poppins", sans-serif;
-        }
-    </style>
     <!-- daisy UI + tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="poppins min-h-screen py-5">
-    <div class="z-10 max-w-screen-lg mx-auto min-h-screen border border-none rounded-lg">
+    <div class="max-w-screen-lg mx-auto min-h-screen border border-none rounded-lg">
     <!-- Navbar section  -->
         <header class="bg-white p-3 mb-2 flex justify-between items-center border border-none rounded-md">
             <div class="gap-2 flex justify-between items-center">
-                <img src="./images/logo.png" alt="" srcset="">
-                <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
+                <img class="h-10 w-10" src="./images/logo.png" alt="" srcset="">
+                <h1 class="text-2xl">Dev<span class="font-bold">Board</span></h1>
             </div>
 
             <div class="flex justify-between items-center gap-3">
-                <div class="bg-blue-100 flex justify-between items-center gap-3 p-2 border border-none rounded-2xl">
+                <div class="bg-[#e4e9f5] flex justify-between items-center gap-2 p-2 border border-none rounded-2xl">
                     <img src="./images/checkbox.png" alt="">
                     <p id="completed-task">23</p>
                 </div>
-                <button id="btn-toggle" class="btn bg-blue-100 p-1 border border-none rounded-full"><img src="./images/theme-btn.png" alt=""></button>  
+                <button id="btn-toggle" class="btn bg-[#e4e9f5] p-2 border border-none rounded-full"><img class="w-8 h-8" src="./images/theme-btn.png" alt=""></button>  
             </div>
         
         </header>
@@ -43,7 +38,7 @@
                 <div class="col-span-3">
                     <div class="grid grid-cols-4 gap-3">
                         <!-- first  -->
-                        <div class="bg-blue-100 flex items-center gap-2 p-3 border border-none rounded-md">
+                        <div class="bg-color flex items-center gap-2 p-3 border border-none rounded-md">
                             <img src="./images/checkbox.png" alt="">
                             <div>
                                 <p>Task Assigned</p>
@@ -51,32 +46,32 @@
                             </div>
                         </div>
                         <!-- second  -->
-                        <div class="bg-blue-100 col-span-2 flex items-center gap-2 p-3 border border-none rounded-md">
+                        <div id="discover-box" class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] col-span-2 flex items-center gap-2 p-3 border border-none rounded-md">
                             <img src="./images/board.png" alt="">
                             <p>Discover Something New Today</p>
                         </div>
                         <!-- third  -->
-                        <div class="bg-blue-100 flex items-center gap-2 p-3 border border-none rounded-md">
+                        <div class="bg-color flex items-center gap-2 p-3 border border-none rounded-md">
                             <img src="./images/calender.png" alt="">
                             <!-- date -->
-                            <p>Wed, July 28 2025</p>
+                            <p id="current-date"></p>
                         </div>
                         <!-- dot dot  -->
                         <div class="col-span-4 mb-3 border-b-2 border-dashed border-slate-500"></div>
                     </div>
                 </div>
-                <!-- dot dot  -->
              
                 <!-- box 1 -->
-                <div class="bg-blue-100 p-3 border border-none rounded-md">
-                    <button class="btn mb-2">ShopEase</button>
+                <div class="bg-[#F4F7FF] p-3 border border-none rounded-md">
+                    <button class="btn mb-2 bg-white">ShopEase</button>
                     <h1 id="title-box-1" class="text-md font-medium mb-2">Fix Mobile Button Issue </h1>
                     <p class="text-sm font-regular bg-white p-3 border border-none rounded-md mb-3">Debug using Chrome DevTools, check for overlapping elements,...</p>
                     <!-- dot dot  -->
                     <div class="mb-3 border-b-2 border-dashed border-slate-500"></div>
-                    <div class="flex justify-center gap-3">
-                        <div>
+                    <div class="flex justify-between">
+                        <div class="text-xs">
                             <p>Deadline</p>
+                            <p class="font-medium">21 March 2025</p>
                         </div>
         
                         <button id="btn-box-1" type="submit" class="btn bg-blue-400 text-white border border-none rounded-md ">Completed</button>
@@ -84,15 +79,16 @@
                     </div>
                 </div>
                 <!-- box 2  -->
-                <div class="bg-blue-100 p-3 border border-none rounded-md">
-                    <button class="btn mb-2">CloudSync</button>
+                <div class="bg-[#F4F7FF] p-3 border border-none rounded-md">
+                    <button class="btn mb-2 bg-white ">CloudSync</button>
                     <h1 id="title-box-2" class="text-md font-medium mb-2">Add Dark Mode</h1>
                     <p class="text-sm font-regular bg-white p-3 border border-none rounded-md mb-3">Debug using Chrome DevTools, check for overlapping elements,...</p>
                     <!-- dot dot  -->
                     <div class="mb-3 border-b-2 border-dashed border-slate-500"></div>
-                    <div class="flex justify-center gap-3">
-                        <div>
+                    <div class="flex justify-between">
+                        <div class="text-xs">
                             <p>Deadline</p>
+                            <p class="font-medium">21 March 2025</p>
                         </div>
                         
                         <button id="btn-box-2"  class="btn bg-blue-400 text-white border border-none rounded-md ">Completed</button>
@@ -100,15 +96,16 @@
                     </div>
                 </div>
                 <!-- box 3  -->
-                <div class="bg-blue-100 p-3 border border-none rounded-md">
-                    <button class="btn mb-2">SwiftPay</button>
+                <div class="bg-[#F4F7FF] p-3 border border-none rounded-md">
+                    <button class="btn mb-2 bg-white">SwiftPay</button>
                     <h1 id="title-box-3" class="text-md font-medium mb-2">Optimize  Home page  </h1>
                     <p class="text-sm font-regular bg-white p-3 border border-none rounded-md mb-3">Debug using Chrome DevTools, check for overlapping elements,...</p>
                     <!-- dot dot  -->
                     <div class="mb-3 border-b-2 border-dashed border-slate-500"></div>
-                    <div class="flex justify-center gap-3">
-                        <div>
+                    <div class="flex justify-between">
+                        <div class="text-xs">
                             <p>Deadline</p>
+                            <p class="font-medium">21 March 2025</p>
                         </div>
                   
                         <button id="btn-box-3" class="btn bg-blue-400 text-white border border-none rounded-md ">Completed</button>
@@ -116,15 +113,16 @@
                     </div>
                 </div>
                 <!-- box 4  -->
-                <div class="bg-blue-100 p-3 border border-none rounded-md">
-                    <button class="btn mb-2">Meta</button>
+                <div class="bg-[#F4F7FF] p-3 border border-none rounded-md">
+                    <button class="btn mb-2 bg-white">Meta</button>
                     <h1 id="title-box-4" class="text-md font-medium mb-2">Add new emoji 🤲</h1>
                     <p class="text-sm font-regular bg-white p-3 border border-none rounded-md mb-3">Debug using Chrome DevTools, check for overlapping elements,...</p>
                     <!-- dot dot  -->
                     <div class="mb-3 border-b-2 border-dashed border-slate-500"></div>
-                    <div class="flex justify-center gap-3">
-                        <div>
+                    <div class="flex justify-between">
+                        <div class="text-xs">
                             <p>Deadline</p>
+                            <p class="font-medium">21 March 2025</p>
                         </div>
                         
                        <button id="btn-box-4" class="btn bg-blue-400 text-white border border-none rounded-md ">Completed</button>
@@ -132,15 +130,16 @@
                     </div>
                 </div>
                 <!-- box 5  -->
-                <div class="bg-blue-100 p-3 border border-none rounded-md">
-                    <button class="btn mb-2">Google LLC</button>
+                <div class="bg-[#F4F7FF] p-3 border border-none rounded-md">
+                    <button class="btn mb-2 bg-white">Google LLC</button>
                     <h1 id="title-box-5" class="text-md font-medium mb-2">Integrate OpenAI API  </h1>
                     <p class="text-sm font-regular bg-white p-3 border border-none rounded-md mb-3">Debug using Chrome DevTools, check for overlapping elements,...</p>
                     <!-- dot dot  -->
                     <div class="mb-3 border-b-2 border-dashed border-slate-500"></div>
-                    <div class="flex justify-center gap-3">
-                        <div>
+                    <div class="flex justify-between">
+                        <div class="text-xs">
                             <p>Deadline</p>
+                            <p class="font-medium">21 March 2025</p>
                         </div>
                       
                         <button id="btn-box-5" class="btn bg-blue-400 text-white border border-none rounded-md ">Completed</button>
@@ -148,15 +147,16 @@
                     </div>
                 </div>
                 <!-- box 6  -->
-                <div class="bg-blue-100 p-3 border border-none rounded-md">
-                    <button class="btn mb-2">Glassdoar</button>                    
+                <div class="bg-[#F4F7FF] p-3 border border-none rounded-md">
+                    <button class="btn mb-2 bg-white">Glassdoar</button>                    
                     <h1 id="title-box-6" class="text-md font-medium mb-2">Improve Job searching </h1>
                     <p class="text-sm font-regular bg-white p-3 border border-none rounded-md mb-3">Debug using Chrome DevTools, check for overlapping elements,...</p>
                     <!-- dot dot  -->
                     <div class="mb-3 border-b-2 border-dashed border-slate-500"></div>
-                    <div class="flex justify-center gap-3">
-                        <div>
+                    <div class="flex justify-between">
+                        <div class="text-xs">
                             <p>Deadline</p>
+                            <p class="font-medium">21 March 2025</p>
                         </div>
                        
                         <button id="btn-box-6" class="btn bg-blue-400 text-white border border-none rounded-md ">Completed</button>
@@ -187,6 +187,8 @@
     <script src="./script/toggle.js"></script>
     <script src="./script/task.js"></script>
     <script src="./script/clear.js"></script>
+    <script src="./script/discover.js"></script>
+    <script src="./script/date.js"></script>
     
 </body>
 </html>
