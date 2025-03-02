@@ -18,10 +18,19 @@ function handleButtonClick(buttonId , titleId) {
 
         const div = document.createElement('div');
         div.classList.add("task-message");
-
         div.innerText = `You have complete the task ${title} at ${formattedTime}`; 
-
         document.getElementById("history-container").appendChild(div);
+
+        const completedTask = document.getElementById("completed-task").innerText;
+        const convertedCT = parseInt(completedTask) + 1;
+        document.getElementById("completed-task").innerText = convertedCT;
+
+        alert("Board Updated Successfully");
+        const last = document.getElementById("task-count").innerText;
+        if (parseInt(last) === 0){
+            alert("Congratulations! You have completed all the tasks");
+        }
+          
     });
 } 
 
